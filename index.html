@@ -4,374 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SC Financial Life Group — Stewards of Your Financial Life</title>
-  <meta name="description" content="SC Financial Life Group — Licensed insurance brokerage. Prudence. Protection. Prosperity." />
+  <meta name="description" content="SC Financial Life Group — Licensed insurance brokerage. Thoughtful planning, tailored protection, and the GOALL Program for families and businesses." />
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --midnight: #082545;
-      --midnight-deep: #061a33;
-      --gold: #86710D;
-      --gold-light: #c9a227;
-      --gold-pale: #d4b86a;
-      --parchment: #EDEAE3;
-      --text: #EDEAE3;
-      --text-muted: rgba(237,234,227,0.65);
-      --border: rgba(237,234,227,0.12);
-      --border-gold: rgba(134,113,13,0.4);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Instrument Sans', -apple-system, sans-serif;
-      background-color: var(--midnight);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(6,26,51,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-gold);
-      padding: 0 clamp(20px, 5vw, 80px);
-    }
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-    }
-    .nav-logo {
-      height: 44px;
-      width: auto;
-    }
-    .nav-brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-    .nav-brand-name {
-      font-family: 'Gloock', Georgia, serif;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--parchment);
-      line-height: 1.2;
-      letter-spacing: 0.02em;
-    }
-    .nav-brand-sub {
-      font-size: 0.62rem;
-      font-weight: 600;
-      color: var(--gold-light);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--parchment); }
-    .nav-cta {
-      background: var(--gold);
-      color: var(--parchment) !important;
-      padding: 10px 22px;
-      border-radius: 6px;
-      font-weight: 600 !important;
-      transition: background 0.2s !important;
-    }
-    .nav-cta:hover { background: var(--gold-light) !important; color: var(--midnight) !important; }
-
-    /* ── HERO ── */
-    .hero {
-      padding: clamp(80px, 12vw, 140px) clamp(20px, 5vw, 80px);
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--gold-light);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-    .hero h1 {
-      font-family: 'Gloock', Georgia, serif;
-      font-size: clamp(2.6rem, 5vw, 4.2rem);
-      font-weight: 400;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: var(--parchment);
-      margin-bottom: 16px;
-    }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
-    .hero-tagline {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.25rem;
-      font-style: italic;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      line-height: 1.5;
-    }
-    .hero-pillars {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--gold-pale);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 40px;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--parchment);
-      padding: 14px 32px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .btn-primary:hover { background: var(--gold-light); color: var(--midnight); transform: translateY(-1px); }
-    .btn-secondary {
-      display: inline-block;
-      border: 1px solid var(--border-gold);
-      color: var(--parchment);
-      padding: 14px 32px;
-      border-radius: 6px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .btn-secondary:hover { border-color: var(--gold-light); background: rgba(134,113,13,0.12); }
-
-    .hero-seal {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-seal img {
-      width: min(380px, 100%);
-      opacity: 0.92;
-      filter: drop-shadow(0 24px 60px rgba(134,113,13,0.2));
-    }
-
-    /* ── STATS ── */
-    .stats-bar {
-      background: rgba(6,26,51,0.6);
-      border-top: 1px solid var(--border-gold);
-      border-bottom: 1px solid var(--border-gold);
-      padding: 32px clamp(20px, 5vw, 80px);
-    }
-    .stats-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-    .stat-item { text-align: center; }
-    .stat-num {
-      font-family: 'Gloock', Georgia, serif;
-      font-size: 2rem;
-      color: var(--gold-light);
-      display: block;
-    }
-    .stat-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    /* ── SECTION ── */
-    section {
-      padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 80px);
-    }
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .section-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--gold-light);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .section-title {
-      font-family: 'Gloock', Georgia, serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      font-weight: 400;
-      color: var(--parchment);
-      margin-bottom: 16px;
-      line-height: 1.15;
-    }
-    .section-body {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      line-height: 1.7;
-      margin-bottom: 48px;
-    }
-
-    /* ── FEATURES GRID ── */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .feature-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px 24px;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .feature-card:hover {
-      border-color: var(--border-gold);
-      background: rgba(134,113,13,0.06);
-    }
-    .feature-icon {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-    }
-    .feature-title {
-      font-family: 'Gloock', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: var(--parchment);
-      margin-bottom: 10px;
-    }
-    .feature-desc {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* ── DIVIDER ── */
-    .gold-divider {
-      width: 48px;
-      height: 1px;
-      background: var(--gold);
-      margin: 0 auto 12px;
-    }
-    .diamond {
-      color: var(--gold);
-      font-size: 0.6rem;
-      display: block;
-      text-align: center;
-      margin: 6px auto;
-    }
-
-    /* ── CTA SECTION ── */
-    .cta-section {
-      background: rgba(6,26,51,0.7);
-      border-top: 1px solid var(--border-gold);
-      border-bottom: 1px solid var(--border-gold);
-      text-align: center;
-    }
-    .cta-section .section-body { margin-left: auto; margin-right: auto; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--midnight-deep);
-      border-top: 1px solid var(--border-gold);
-      padding: 40px clamp(20px, 5vw, 80px);
-    }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .footer-logo { height: 36px; width: auto; }
-    .footer-brand-name {
-      font-family: 'Gloock', Georgia, serif;
-      font-size: 0.9rem;
-      color: var(--parchment);
-    }
-    .footer-right {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      text-align: right;
-    }
-    .footer-tagline {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-style: italic;
-      font-size: 0.88rem;
-      color: var(--gold-pale);
-      margin-top: 4px;
-    }
-
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-seal { display: none; }
-      .nav-links { display: none; }
-      .footer-inner { flex-direction: column; text-align: center; }
-      .footer-right { text-align: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-brand">
+      <a href="index.html" class="nav-brand">
         <img src="logo.png" alt="SC Financial Life Group" class="nav-logo" />
         <div class="nav-brand-text">
           <span class="nav-brand-name">SC Financial Life Group</span>
@@ -379,9 +24,9 @@
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#process">Our Process</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="life-insurance.html">Life Insurance</a></li>
+        <li><a href="goall-program.html">GOALL Program</a></li>
         <li><a href="https://rush702.github.io/SC-Financial-Life-Group/" class="nav-cta">Get a Quote</a></li>
       </ul>
     </div>
@@ -392,11 +37,11 @@
     <div class="hero-content">
       <p class="hero-eyebrow">Licensed Insurance Brokerage</p>
       <h1>Stewards of Your<br /><em>Financial Life.</em></h1>
-      <p class="hero-tagline">We guide families toward lasting financial security — with clarity, care, and craftsmanship.</p>
+      <p class="hero-tagline">Thoughtful planning. Tailored protection. Nearly a decade guiding families and businesses toward lasting financial security.</p>
       <p class="hero-pillars">Prudence &nbsp;·&nbsp; Protection &nbsp;·&nbsp; Prosperity</p>
       <div class="hero-actions">
         <a href="https://rush702.github.io/SC-Financial-Life-Group/" class="btn-primary">Start My Application →</a>
-        <a href="#about" class="btn-secondary">Learn More</a>
+        <a href="goall-program.html" class="btn-secondary">Explore GOALL</a>
       </div>
     </div>
     <div class="hero-seal">
@@ -426,32 +71,67 @@
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <section id="about">
+  <!-- WHO WE SERVE -->
+  <section id="about" class="dark-section">
     <div class="section-inner">
-      <p class="section-eyebrow">Our Mission</p>
-      <h2 class="section-title">The foundation of a financial life<br />is stewardship, not speculation.</h2>
-      <p class="section-body">SC Financial Life Group is a licensed insurance brokerage dedicated to helping families protect what matters most. We believe that real financial security is built through prudent planning, comprehensive protection, and a long-term vision of prosperity.</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
-          <div class="feature-title">Life Insurance</div>
-          <p class="feature-desc">Term and permanent life insurance solutions tailored to your family's needs and financial goals.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">❤️</div>
-          <div class="feature-title">Health Coverage</div>
-          <p class="feature-desc">Comprehensive health insurance options to keep your family protected at every stage of life.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📈</div>
-          <div class="feature-title">Wealth Protection</div>
-          <p class="feature-desc">Annuities and financial products designed to preserve and grow your family's legacy.</p>
-        </div>
-        <div class="feature-card">
+      <p class="section-eyebrow">Who We Serve</p>
+      <h2 class="section-title">Two audiences. One standard of care.</h2>
+      <p class="section-body">SC Financial Life Group is a licensed insurance brokerage dedicated to helping families and businesses protect what matters most. Real financial security is built through prudent planning, comprehensive protection, and a long-term vision of prosperity — and we deliver it through an independent, multi-carrier approach.</p>
+      <div class="two-up">
+        <a href="life-insurance.html#personal" class="feature-card feature-card-link">
           <div class="feature-icon">👨‍👩‍👧</div>
-          <div class="feature-title">Family Planning</div>
-          <p class="feature-desc">Holistic coverage strategies that grow with your family and adapt to life's milestones.</p>
+          <div class="feature-title">Personal Solutions</div>
+          <p class="feature-desc">Term, permanent, and annuity coverage for families and individuals building long-term peace of mind.</p>
+          <span class="feature-link">See Personal Solutions →</span>
+        </a>
+        <a href="life-insurance.html#business" class="feature-card feature-card-link">
+          <div class="feature-icon">🏛️</div>
+          <div class="feature-title">Business Solutions</div>
+          <p class="feature-desc">Executive bonus, key-person, buy-sell, defined benefit plans, and estate preservation for owners and executives protecting what they've built.</p>
+          <span class="feature-link">See Business Solutions →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOALL FEATURED CALLOUT -->
+  <section class="parchment-section" id="goall">
+    <div class="section-inner">
+      <p class="section-eyebrow">Our Flagship Program</p>
+      <h2 class="section-title">Growth. Opportunity. Asset Leverage. Legacy.</h2>
+      <p class="section-body">The GOALL Program is a financial strategy built for businesses and families alike. It helps employers increase profits, reduce tax liability, and enhance employee benefits — while giving families a secure path to tax-free retirement, homeownership, college savings, and protection against life's unexpected risks.</p>
+      <div class="goall-letters">
+        <span class="goall-chip"><strong>G</strong>Growth</span>
+        <span class="goall-chip"><strong>O</strong>Opportunity</span>
+        <span class="goall-chip"><strong>A</strong>Asset Leverage</span>
+        <span class="goall-chip"><strong>L</strong>Legacy</span>
+        <span class="goall-chip"><strong>L</strong>Life's Risks Covered</span>
+      </div>
+      <a href="goall-program.html" class="btn-primary">Explore the GOALL Program →</a>
+    </div>
+  </section>
+
+  <!-- MULTI-CARRIER -->
+  <section class="dark-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">Our Approach</p>
+      <h2 class="section-title">Independent. Multi-carrier.<br />Unbiased by design.</h2>
+      <p class="section-body">We partner with multiple top-rated carriers so our recommendations are shaped by your needs, never by a single-company lineup. It's how we match every client with the coverage that actually fits.</p>
+      <div class="features-grid features-grid--3">
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <div class="feature-title">Independent</div>
+          <p class="feature-desc">No captive carrier relationships — just recommendations that serve your goals.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <div class="feature-title">Top-Rated Carriers</div>
+          <p class="feature-desc">We work only with financially strong, highly rated insurance companies.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧭</div>
+          <div class="feature-title">Fiduciary Mindset</div>
+          <p class="feature-desc">We treat your money and your family the way we'd treat our own — with care and clarity.</p>
         </div>
       </div>
     </div>
